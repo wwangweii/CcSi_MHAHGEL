@@ -1,5 +1,5 @@
 
-# CcSi_MHAHGEL: PyTorch Implementation for 'Multiview hyperedge-aware hypergraph embedding learning for multisite, multiatlas fmri based functional connectivity network analysis'
+# Implementation for 'Multiview hyperedge-aware hypergraph embedding learning for multisite, multiatlas fmri based functional connectivity network analysis'
 
 This repository contains a PyTorch implementation for the paper entitled **"Multiview hyperedge-aware hypergraph embedding learning for multisite, multiatlas fMRI based functional connectivity network analysis"**. The project is dedicated to the analysis of functional connectivity networks (FCNs) extracted from functional magnetic resonance imaging (fMRI) data. It is designed to handle data across multiple sites and utilize multiple atlases to enhance the diagnostic accuracy of neurological disorders.
 
