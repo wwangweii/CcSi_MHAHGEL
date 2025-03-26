@@ -349,14 +349,6 @@ if __name__ == '__main__':
             H12 = construct_H_with_KNN_from_distance(average_FC12, K_neigs1, True)
             H21 = construct_H_with_KNN_from_distance(average_FC21, K_neigs2, True)
             H22 = construct_H_with_KNN_from_distance(average_FC22, K_neigs2, True)
-            # average_FC11[average_FC11 <= args.thres] = 0
-            # average_FC12[average_FC12 <= args.thres] = 0
-            # average_FC21[average_FC21 <= args.thres] = 0
-            # average_FC22[average_FC22 <= args.thres] = 0
-            # H11 = average_FC11 + np.eye((average_FC11.shape[0]))
-            # H12 = average_FC12 + np.eye((average_FC12.shape[0]))
-            # H21 = average_FC21 + np.eye((average_FC21.shape[0]))
-            # H22 = average_FC22 + np.eye((average_FC22.shape[0]))
             H1 = hyperedge_concat(H11, H12)
             H2 = hyperedge_concat(H21, H22)
             H1 = torch.tensor(H1).type(torch.FloatTensor)
