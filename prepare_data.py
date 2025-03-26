@@ -5,9 +5,7 @@ import sys
 import scipy.io as io
 
 dir = "put/your/path/to/prepared/dataset/ABIDE/"
-dir = "/home/proj-openset/dataset/ABIDE/"
 filename = "put/your/path/to/dataset/ABIDE/Phenotypic_V1_0b_preprocessed1.csv"
-filename = "/home/proj-openset/dataset/ABIDE/Phenotypic_V1_0b_preprocessed1.csv"
 data = pd.read_csv(filename, header=0, index_col=0)
 dataframe = pd.DataFrame(data, columns=None)
 header = np.array(dataframe.columns)
