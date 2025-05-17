@@ -320,7 +320,7 @@ def construct_H_with_KNN_from_distance(feature, k_neig, is_probH = True, normali
 
         for node_idx in nearest_idx[:k_neig]:
             if is_probH:
-                H[node_idx, center_idx] = np.exp(-dis_vec[node_idx] ** 2 / 2 * avg_dis ** 2)
+                H[node_idx, center_idx] = np.exp(-dis_vec[node_idx] ** 2 / (2 * avg_dis ** 2))
             else:
                 H[node_idx, center_idx] = 1.0
     if normalize:
