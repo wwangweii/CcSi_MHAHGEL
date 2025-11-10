@@ -17,7 +17,6 @@ import json
 from sklearn.metrics import roc_auc_score
 warnings.filterwarnings("ignore")
 from datetime import date
-import os
 current_date = date.today()
 
 import matplotlib.pyplot as plt
@@ -305,7 +304,7 @@ if __name__ == '__main__':
     multi_label = np.zeros((sub, 3))
     multi_label[:, 0] = label    #asd/tdc
     multi_label[:, 1] = site_target #site
-    multi_label[:, 2] = sex_label  # site
+    multi_label[:, 2] = sex_label  #sex
     for i in range(sub):
         temp1 = np.reshape(feature1[i, :], (ROI1, ROI1))
         temp2 = np.reshape(feature2[i, :], (ROI2, ROI2))
@@ -408,4 +407,5 @@ if __name__ == '__main__':
     output_file = f"./result/CcSiMAHGEL_beta{args.beta}_theta{args.theta}_{current_date}.json"
     with open(output_file, 'w') as fp:
         json.dump(res, fp)
+
 
