@@ -318,7 +318,7 @@ if __name__ == '__main__':
     best_acc = 0
     best_alpha = 0
     best_theta = 0
-    state = [0]
+    state = [i for i in range(50)]
     all_state_accuracy = []
     all_state_sensitivity = []
     all_state_precision = []
@@ -408,3 +408,4 @@ if __name__ == '__main__':
     output_file = f"./result/CcSiMAHGEL_beta{args.beta}_theta{args.theta}_{current_date}.json"
     with open(output_file, 'w') as fp:
         json.dump(res, fp)
+
